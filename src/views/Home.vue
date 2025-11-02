@@ -1,8 +1,6 @@
 <template>
   <div class="home">
     <section>
-      <h2>[ Projects ]</h2>
-
       <div class="projects-grid">
         <article
           v-for="project in projects"
@@ -13,10 +11,6 @@
           <h3>{{ project.title }}</h3>
           <p><small>{{ formatDate(project.date) }}</small></p>
           <p>{{ project.description }}</p>
-
-          <div class="project-tags">
-            <span v-for="tag in project.tags" :key="tag" class="tag">#{{ tag }}</span>
-          </div>
 
           <router-link :to="project.route" role="button">Launch →</router-link>
         </article>
@@ -39,6 +33,15 @@ export default {
           tags: ['music', 'interactive', 'audio', 'web-audio'],
           thumbnail: '🎵',
           route: '/projects/binary-beats'
+        },
+        {
+          id: 'loop-piano',
+          title: 'Loop Piano',
+          description: 'Play a 16-key piano mapped to your keyboard with white and black keys. Layer loops across 4 tracks to build complex melodies.',
+          date: '2025-11-02',
+          tags: ['music', 'looper', 'piano', 'web-audio'],
+          thumbnail: '🎹',
+          route: '/projects/loop-piano'
         }
       ]
     }

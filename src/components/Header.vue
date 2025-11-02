@@ -1,7 +1,7 @@
 <template>
   <header class="site-header">
     <router-link to="/" class="logo">MIXIN2</router-link>
-    <div class="tagline">Music × Code × Experiments</div>
+    <div class="tagline">AI created nonsense</div>
   </header>
 </template>
 

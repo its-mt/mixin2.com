@@ -142,7 +142,6 @@ export default {
   },
   mounted() {
     this.audioContext = new (window.AudioContext || window.webkitAudioContext)()
-    this.initPattern()
   },
   beforeUnmount() {
     if (this.isPlaying) {
@@ -153,9 +152,6 @@ export default {
     }
   },
   methods: {
-    initPattern() {
-      this.pattern = this.tracks.map(() => Array(this.STEPS).fill(false))
-    },
     toggleStep(trackIndex, stepIndex) {
       this.pattern[trackIndex][stepIndex] = !this.pattern[trackIndex][stepIndex]
     },

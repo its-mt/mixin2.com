@@ -11,6 +11,11 @@ const routes = [
     path: '/projects/binary-beats',
     name: 'BinaryBeats',
     component: () => import('../projects/BinaryBeats.vue')
+  },
+  {
+    path: '/projects/loop-piano',
+    name: 'LoopPiano',
+    component: () => import('../projects/LoopPiano.vue')
   }
 ]
 
