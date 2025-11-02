@@ -16,6 +16,11 @@ const routes = [
     path: '/projects/loop-piano',
     name: 'LoopPiano',
     component: () => import('../projects/LoopPiano.vue')
+  },
+  {
+    path: '/projects/woodland-scene',
+    name: 'WoodlandScene',
+    component: () => import('../projects/WoodlandScene.vue')
   }
 ]
 

@@ -42,6 +42,15 @@ export default {
           tags: ['music', 'looper', 'piano', 'web-audio'],
           thumbnail: '🎹',
           route: '/projects/loop-piano'
+        },
+        {
+          id: 'woodland-scene',
+          title: 'Woodland Scene',
+          description: 'Generate random ASCII woodland scenes with procedurally placed trees, rabbits, and mushrooms. Each scene is unique.',
+          date: '2025-11-02',
+          tags: ['generative', 'ascii', 'art', 'procedural'],
+          thumbnail: '🌲',
+          route: '/projects/woodland-scene'
         }
       ]
     }
