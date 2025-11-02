@@ -1,7 +1,9 @@
 <template>
   <header class="site-header">
-    <router-link to="/" class="logo">MIXIN2</router-link>
-    <div class="tagline">AI created nonsense</div>
+    <div class="container">
+      <router-link to="/" class="logo">MIXIN2</router-link>
+      <div class="tagline">AI created nonsense</div>
+    </div>
   </header>
 </template>
 

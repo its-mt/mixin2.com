@@ -18,7 +18,7 @@
                 type="range"
                 v-model.number="bpm"
                 min="60"
-                max="180"
+                max="320"
                 step="5"
               />
             </label>
