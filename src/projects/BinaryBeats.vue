@@ -83,21 +83,24 @@ export default {
     SubHeader
   },
   data() {
+    const STEPS = 16
+    const tracks = [
+      { name: 'Kick', freq: 60, type: 'sine' },
+      { name: 'Snare', freq: 200, type: 'noise' },
+      { name: 'Hi-Hat', freq: 8000, type: 'noise' },
+      { name: 'Bass', freq: 80, type: 'sawtooth' },
+      { name: 'Lead', freq: 440, type: 'square' }
+    ]
+
     return {
       audioContext: null,
-      tracks: [
-        { name: 'Kick', freq: 60, type: 'sine' },
-        { name: 'Snare', freq: 200, type: 'noise' },
-        { name: 'Hi-Hat', freq: 8000, type: 'noise' },
-        { name: 'Bass', freq: 80, type: 'sawtooth' },
-        { name: 'Lead', freq: 440, type: 'square' }
-      ],
-      STEPS: 16,
+      tracks,
+      STEPS,
       isPlaying: false,
       currentStep: 0,
       intervalId: null,
       bpm: 120,
-      pattern: [],
+      pattern: tracks.map(() => Array(STEPS).fill(false)),
       presets: {
         'Basic Beat': [
           [1,0,0,0,1,0,0,0,1,0,0,0,1,0,0,0],
